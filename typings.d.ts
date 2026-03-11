@@ -1,11 +1,13 @@
-declare module "puppeteer-real-browser" {
+declare module "puppeteer-really" {
 	import type { Browser, Page } from "rebrowser-puppeteer-core";
 	import type { GhostCursor } from "ghost-cursor";
 
-	export function connect(options: Options): Promise<ConnectResult>;
+	export function connect(options?: Options): Promise<ConnectResult>;
 
 	interface PageWithCursor extends Page {
 		realClick: GhostCursor["click"];
+		realMove: GhostCursor["move"];
+		realMoveTo: GhostCursor["moveTo"];
 		realCursor: GhostCursor;
 	}
 
@@ -16,7 +18,7 @@ declare module "puppeteer-real-browser" {
 
 	interface Options {
 		args?: string[];
-		headless?: boolean;
+		headless?: boolean | "new" | "shell";
 		customConfig?: import("chrome-launcher").Options;
 		proxy?: ProxyOptions;
 		turnstile?: boolean;

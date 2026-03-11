@@ -1,7 +1,7 @@
 {
-  "name": "puppeteer-real-browser",
-  "version": "1.4.4",
-  "description": "This package is designed to bypass puppeteer's bot-detecting captchas such as Cloudflare. It acts like a real browser and can be managed with puppeteer.",
+  "name": "puppeteer-really",
+  "version": "2.0.0",
+  "description": "Maintained fork of puppeteer-real-browser. Stealth Chromium automation with anti-detection, Turnstile solving, and ghost-cursor integration.",
   "main": "lib/cjs/index.js",
   "module": "lib/esm/index.mjs",
   "exports": {
@@ -17,31 +17,24 @@
     "cjs_test": "node ./test/cjs/test.js"
   },
   "keywords": [
-    "cf-bypass",
-    "cloudflare-bypass",
-    "puppeteer-fingerprint",
-    "puppeteer-cloudflare",
+    "puppeteer-stealth",
     "puppeteer-real-browser",
     "undetectable-puppeteer",
-    "undetect",
-    "undetectable",
-    "puppeteer-undetectable",
-    "puppeteer-undetect",
-    "puppeteer-undetectable-bypass",
-    "puppeteer-undetect-bypass",
-    "puppeteer-undetectable-cloudflare",
-    "puppeteer-undetect-cloudflare",
-    "puppeteer-undetectable-cf",
-    "puppeteer-undetect-cf",
-    "puppeteer-undetectable-cf-bypass"
+    "cloudflare-bypass",
+    "turnstile-solver",
+    "ghost-cursor",
+    "rebrowser",
+    "anti-detection",
+    "web-scraping",
+    "bot-detection-bypass"
   ],
-  "author": "zfc-software",
-  "license": "ISC",
+  "author": "zfc-software (original), fork maintained",
+  "license": "MIT",
   "dependencies": {
-    "chrome-launcher": "^1.1.2",
-    "ghost-cursor": "^1.3.0",
+    "chrome-launcher": "^1.2.1",
+    "ghost-cursor": "^1.4.2",
     "puppeteer-extra": "^3.3.6",
-    "rebrowser-puppeteer-core": "^23.3.1",
+    "rebrowser-puppeteer-core": "^24.8.1",
     "tree-kill": "^1.2.2",
     "xvfb": "^0.4.0"
   },
@@ -49,6 +42,5 @@
     "type": "git",
     "url": "https://github.com/zfcsoftware/puppeteer-real-browser"
   },
-  "readme": "README.md",
-  "homepage": "https://github.com/zfcsoftware/puppeteer-real-browser"
+  "readme": "README.md"
 }
